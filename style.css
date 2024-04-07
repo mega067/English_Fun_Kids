@@ -1,6 +1,6 @@
 html {
     background: rgb(240,225,114);
-    background: linear-gradient(0deg, rgba(240,225,114,1) 0%, rgba(159,17,140,1) 100%);
+    background: linear-gradient(0deg, rgb(126, 229, 255) 0%, rgba(159,17,140,1) 100%);
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
