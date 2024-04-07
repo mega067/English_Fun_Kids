@@ -5,8 +5,13 @@ html {
 }
 
 .container_1 {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 300px;
+    margin: 12 auto;
+    padding: 20px;
+}
+.container_2 {
+    max-width: 300px;
+    margin: 20px;
     padding: 20px;
 }
 
@@ -19,6 +24,7 @@ html {
     padding: 20px;
 }
 .heading {
+    margin-top: 0px;
     text-align: center;
     color: rgb(0, 0, 0);
     border-radius: 30px;
@@ -26,6 +32,7 @@ html {
     background-color: rgb(10, 204, 230);
     padding: 20px;
 }
+
 
 
 
