@@ -14,6 +14,12 @@ html {
     margin: 20px;
     padding: 20px;
 }
+.container_3 {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
 
 .heading_title {
     text-align: center;
@@ -32,10 +38,6 @@ html {
     background: linear-gradient(0deg, rgb(117, 214, 193) 0%, rgb(245, 171, 223) 100%);
     padding: 20px;
 }
-
-
-
-
 
 .gif-container {
     border-radius: 30px;
