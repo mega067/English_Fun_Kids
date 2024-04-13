@@ -53,6 +53,13 @@ html {
 }
 
 .git {
+    align-items: center;
+    width: 60px;
+    height: auto;
+    margin: 0 10px 0 0; /* Adjusted margins */
+}
+
+.icon {
     width: 60px;
     height: auto;
     margin: 0 10px 0 0; /* Adjusted margins */
