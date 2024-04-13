@@ -52,21 +52,32 @@ html {
     
 }
 
-.git{
+.git {
     width: 60px;
     height: auto;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20pk;
-
+    margin: 0 10px 0 0; /* Adjusted margins */
 }
-footer{
-    align-items: center;
+
+footer {
     text-align: center;
 }
 
-.pie{
-    align-items:center;
-    border: 4px solid #f30000; /* Agregar borde alrededor de cada tabla */
+.pie {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Añadir dirección de columna para apilar verticalmente */
+    border: 4px solid #f30000;
     background: linear-gradient(0deg, rgb(239, 255, 98) 0%, rgb(129, 225, 255) 100%);
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Aumentar el espacio entre enlaces y copyright */
+}
+
+.pie p { /* Seleccionar el párrafo dentro del pie de página */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    text-align: center; /* Mantener el texto centrado */
 }
