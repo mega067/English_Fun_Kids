@@ -21,6 +21,13 @@ html {
     padding: 20px;
 }
 
+.img_game{
+    border: 4px solid #160092; /* Agregar borde alrededor de cada tabla */
+    border-radius: 20px;
+    align-items: center;
+    width: 200px;
+    height: auto;
+}
 
 
 .heading_title {
