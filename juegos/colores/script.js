@@ -2,15 +2,19 @@ const colors = ["red", "green", "blue", "yellow", "orange", "purple", /*... more
 const colorDisplay = document.getElementById("color-display");
 const optionsContainer = document.getElementById("options");
 const resultDisplay = document.getElementById("result");
-const newGameButton = document.getElementById("new-game")
+const newGameButton = document.getElementById("new-game");
+const feedbackImage = document.getElementById("feedback-image");
+const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
 
 function startGame() {
-  targetColor = colors[Math.floor(Math.random() * colors.length)];
-  colorDisplay.textContent = targetColor;
-  createOptions();
-}
+    targetColor = colors[Math.floor(Math.random() * colors.length)];
+    colorDisplay.textContent = targetColor;
+    createOptions();
+    feedbackImage.src = ""; // Clear previous image
+    resultDisplay.textContent = ""; // Clear previous text
+  }
 
 
 function createOptions() {
@@ -37,12 +41,18 @@ function createOptions() {
 }
 
 function checkAnswer(isCorrect) {
-  if (isCorrect) {
-    resultDisplay.textContent = "¡Correct!";
-  } else {
-    resultDisplay.textContent = "Try Again!";
+    if (isCorrect) {
+      feedbackImage.src = "/img/memoramas_img/rana.jpg"; // Replace with your correct image path
+      resultDisplay.textContent = "¡Correct!";
+    } else {
+      feedbackImage.src = "incorrect-image.png"; // Replace with your incorrect image path
+      resultDisplay.textContent = "Try Again!";
+    }
   }
-}
 
-newGameButton.addEventListener('click', startGame);
-startGame(); 
+  backToHomeButton.addEventListener('click', () => {
+    window.location.href = "/index.html"; // Change to your actual home page link
+  });
+  
+  newGameButton.addEventListener('click', startGame);
+  startGame();
