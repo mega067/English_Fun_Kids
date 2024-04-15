@@ -66,8 +66,8 @@ function displayCompletedMessage() {
   statsElement.innerHTML = '¡Completado!';
 
   setTimeout(() => {
-    window.location.href = '/index.html'; // Redirect after 10 seconds
-  }, 5000); // 10000 milliseconds = 10 seconds
+    window.location.href = 'memorama.html'; // Redirect after 10 seconds
+  }, 3000); // 10000 milliseconds = 10 seconds
 }
 
 // ... [HTML structure] ...
