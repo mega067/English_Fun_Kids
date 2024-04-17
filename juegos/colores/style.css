@@ -2,6 +2,8 @@ html {
     background: rgb(240,225,114);
     background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(245, 171, 223) 100%);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+    
 }
 .heading_title {
     text-align: center;
@@ -58,6 +60,8 @@ footer {
   }
   
   #options button {
+    width: 200px;
+    height: 200px;
     padding: 10px 20px;
     margin: 5px;
     border: none;

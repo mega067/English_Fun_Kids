@@ -44,7 +44,7 @@ function activate(e) {
 }
 
 function getFaceImage(imgName) {
-  return imgPath + imgName + '.jpg';  // Example: /img/memoramas_img/rana.jpg
+  return imgPath + imgName + '.jpg';  
 }
 
 function getMatchingEnglishImage(imgName) {
@@ -66,11 +66,10 @@ function displayCompletedMessage() {
   statsElement.innerHTML = '¡Completado!';
 
   setTimeout(() => {
-    window.location.href = '/index.html'; // Redirect after 10 seconds
-  }, 5000); // 10000 milliseconds = 10 seconds
+    window.location.href = 'memorama.html'; // Redirect after 10 seconds
+  }, 3000); // 10000 milliseconds = 10 seconds
 }
 
-// ... [HTML structure] ...
 
 for (let i=0; i < totalCards; i++) {
   let div = document.createElement('div');
@@ -78,12 +77,12 @@ for (let i=0; i < totalCards; i++) {
   cards.push(div);
   document.querySelector('#game').append(cards[i]);
 
-  randomValue(); // Get a random card name
+  randomValue(); 
 
   const cardImage = getFaceImage(availableCardNames[valuesUsed[i]]);
   const matchingEnglishImage = getMatchingEnglishImage(availableCardNames[valuesUsed[i]]);
 
-  // Initially set the matching English image (hidden)
+
   cards[i].querySelectorAll('.face img')[0].src = matchingEnglishImage; 
   cards[i].querySelectorAll('.face img')[0].alt = availableCardNames[valuesUsed[i]];
 

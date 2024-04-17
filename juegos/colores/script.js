@@ -1,4 +1,4 @@
-const colors = ["red", "green", "blue", "yellow", "orange", "purple", /*... more colors */ ]; 
+const colors = ["red", "green", "blue", "yellow", "orange", "purple", "gray", "pink", "lime", "cyan", "black", "white" /*... more colors */ ]; 
 const colorDisplay = document.getElementById("color-display");
 const optionsContainer = document.getElementById("options");
 const resultDisplay = document.getElementById("result");
@@ -23,7 +23,7 @@ function createOptions() {
 
   // Create button for correct color
   const correctButton = document.createElement("button");
-  correctButton.textContent = targetColor;
+
   correctButton.style.backgroundColor = targetColor; 
   correctButton.addEventListener("click", () => checkAnswer(true));
   optionsContainer.appendChild(correctButton);
@@ -32,7 +32,7 @@ function createOptions() {
   shuffledColors.slice(0,3).forEach(color => {
     if (color !== targetColor) {
       const button = document.createElement('button');
-      button.textContent = color;
+
       button.style.backgroundColor = color;
       button.addEventListener('click', () => checkAnswer(false));
       optionsContainer.appendChild(button);
