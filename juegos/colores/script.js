@@ -9,12 +9,14 @@ const backToHomeButton = document.getElementById("back-to-home");
 let targetColor;
 
 function startGame() {
-    targetColor = colors[Math.floor(Math.random() * colors.length)];
-    colorDisplay.textContent = targetColor;
-    createOptions();
-    feedbackImage.src = ""; // Clear previous image
-    resultDisplay.textContent = ""; // Clear previous text
-  }
+  targetColor = colors[Math.floor(Math.random() * colors.length)];
+  colorDisplay.textContent = targetColor;
+  createOptions();
+  feedbackImage.src = ""; 
+  resultDisplay.textContent = ""; 
+  currentScore = 0; // Reset the score when a new game starts
+  updateScoreDisplay();
+}
 
 
 function createOptions() {
@@ -41,14 +43,22 @@ function createOptions() {
 }
 
 function checkAnswer(isCorrect) {
-    if (isCorrect) {
-      feedbackImage.src = "/img/memoramas_img/rana.jpg"; // Replace with your correct image path
-      resultDisplay.textContent = "¡Correct!";
-    } else {
-      feedbackImage.src = "incorrect-image.png"; // Replace with your incorrect image path
-      resultDisplay.textContent = "Try Again!";
-    }
+  if (isCorrect) {
+    currentScore++; // Increment score if correct
+    feedbackImage.src = "/img/memoramas_img/rana.jpg";
+    resultDisplay.textContent = "¡Correct!";
+    updateScoreDisplay();
+    startGame(); // Start a new round
+  } else {
+    currentScore = 0; // Reset score if incorrect
+    feedbackImage.src = "incorrect-image.png";
+    resultDisplay.textContent = "Try Again!";
+    updateScoreDisplay();
   }
+}
+function updateScoreDisplay() {
+  scoreDisplay.textContent = "Score: " + currentScore;
+}
 
   backToHomeButton.addEventListener('click', () => {
     window.location.href = "/index.html"; // Change to your actual home page link
