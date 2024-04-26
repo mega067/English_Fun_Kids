@@ -51,7 +51,7 @@ function checkAnswer(isCorrect) {
     startGame(); // Start a new round
   } else {
     currentScore = 0; // Reset score if incorrect
-    feedbackImage.src = "incorrect-image.png";
+    feedbackImage.src = "/img/memoramas_img/limon.jpg";
     resultDisplay.textContent = "Try Again!";
     updateScoreDisplay();
   }
