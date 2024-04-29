@@ -10,6 +10,13 @@ body{
     max-width: 300px;
     margin: 12 auto;
     padding: 20px;
+    flex-grow: 1;
+    
+   
+}
+.padre{
+    display: flex;
+    flex-wrap: wrap;
 }
 .container_2 {
     max-width: 300px;
