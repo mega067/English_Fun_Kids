@@ -7,58 +7,86 @@ const feedbackImage = document.getElementById("feedback-image");
 const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
+let currentScore = 0; // Initialize score
+const defaultFeedbackImage = "/img/memoramas_img/back.png"; // Default image
 
 function startGame() {
   targetColor = colors[Math.floor(Math.random() * colors.length)];
   colorDisplay.textContent = targetColor;
   createOptions();
-  feedbackImage.src = ""; 
+  feedbackImage.src = defaultFeedbackImage; // Set default image 
   resultDisplay.textContent = ""; 
-  currentScore = 0; // Reset the score when a new game starts
   updateScoreDisplay();
 }
 
 
 function createOptions() {
   optionsContainer.innerHTML = ''; // Clear previous options
-  let shuffledColors = colors.slice().sort(() => Math.random() - 0.5); // Shuffle colors
 
-  // Create button for correct color
-  const correctButton = document.createElement("button");
+  // Randomly choose the target color
+  targetColor = colors[Math.floor(Math.random() * colors.length)];
+  colorDisplay.textContent = targetColor;
 
-  correctButton.style.backgroundColor = targetColor; 
-  correctButton.addEventListener("click", () => checkAnswer(true));
-  optionsContainer.appendChild(correctButton);
+  const buttons = [];
 
-  // Create buttons for incorrect colors
-  shuffledColors.slice(0,3).forEach(color => {
-    if (color !== targetColor) {
-      const button = document.createElement('button');
-
-      button.style.backgroundColor = color;
-      button.addEventListener('click', () => checkAnswer(false));
-      optionsContainer.appendChild(button);
+  // Create buttons for colors
+  for (let i = 0; i < 4; i++) {
+    const button = document.createElement('button');
+    let color;
+    if (i === 0) {
+      color = targetColor; // Assign the target color to the first button
+    } else {
+      color = colors[Math.floor(Math.random() * colors.length)]; // Randomly choose other colors
     }
-  });
+    button.style.backgroundColor = color;
+    button.addEventListener('click', () => checkAnswer(color === targetColor));
+    buttons.push(button);
+  }
+
+  // Shuffle the buttons array
+  buttons.sort(() => Math.random() - 0.5);
+
+  // Append the shuffled buttons to the options container
+  buttons.forEach(button => optionsContainer.appendChild(button));
 }
+
+
 
 function checkAnswer(isCorrect) {
   if (isCorrect) {
-    currentScore++; // Increment score if correct
+    currentScore++; 
     feedbackImage.src = "/img/memoramas_img/rana.jpg";
-    resultDisplay.textContent = "¡Correct!";
+    resultDisplay.textContent = "¡Correcto!";
     updateScoreDisplay();
-    startGame(); // Start a new round
+    setTimeout(startGame, 1000); // Automatic restart after 1 second
   } else {
-    currentScore = 0; // Reset score if incorrect
+    currentScore = 0;
     feedbackImage.src = "/img/memoramas_img/limon.jpg";
-    resultDisplay.textContent = "Try Again!";
+    resultDisplay.textContent = "intentalo otra ves!";
     updateScoreDisplay();
+    
+    // Add animation to buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      if (button.classList.contains('btn_r') || button.classList.contains('btn_b')) {
+        button.classList.add('button-animation', button.classList.contains('btn_r') ? 'btn_r-animation' : 'btn_b-animation');
+      } else {
+        button.classList.add('button-animation');
+      }
+    });
+    setTimeout(() => {
+      buttons.forEach(button => {
+        button.classList.remove('button-animation', 'btn_r-animation', 'btn_b-animation');
+      });
+    }, 500); // Remove animation after 0.5 seconds
   }
 }
+
+
 function updateScoreDisplay() {
-  scoreDisplay.textContent = "Score: " + currentScore;
+  document.getElementById("score").textContent = "Score: " + currentScore;
 }
+
 
   backToHomeButton.addEventListener('click', () => {
     window.location.href = "/index.html"; // Change to your actual home page link

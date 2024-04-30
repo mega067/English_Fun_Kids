@@ -74,3 +74,80 @@ footer {
     text-align: center;
     margin-top: 20px;
   }
+  .img_feed{
+    max-width: 20%;
+    max-height: auto;
+  }
+
+
+
+
+  .button-animation {
+    animation: shake 0.99s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .btn_r-animation {
+    animation: enlargeAndChangeColor 0.999s ease-in-out;
+  }
+  
+  .btn_b-animation {
+    animation: enlargeAndChangeColor 0.5s ease-in-out;
+  }
+  
+  @keyframes enlargeAndChangeColor {
+    0% {
+      transform: scale(1);
+      background-color: initial;
+    }
+    50% {
+      transform: scale(1.2);
+      background-color: red; /* Change to desired color */
+    }
+    100% {
+      transform: scale(1);
+      background-color: initial;
+    }
+  }
+  .btns{
+    align-items: center;
+    margin: 0%;
+    width: 200%;
+
+  }
+ 
+  .btn_r{
+    background-color: greenyellow;
+    width: 20%;
+    height: 50px;
+    font-size: 20px;
+    margin: 20px;
+  }
+  
+  .btn_b{
+    background-color: #f3b200;
+    font-size: 20px; 
+    width: 20%;
+    height: 50px;
+    margin: 20px;
+
+  }
+  #score{
+    font-size: 40px;
+    margin: 12px;
+  }
+  #result{
+    font-size: 40px;
+
+  }
+  #options{
+    border-color: #f30000;
+    border-radius: 10px;
+  }
