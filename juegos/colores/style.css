@@ -117,13 +117,15 @@ footer {
     }
   }
   .btns{
-    align-items: center;
+    
     margin: 0%;
-    width: 200%;
+    width: 100%;
 
   }
  
   .btn_r{
+
+    
     background-color: greenyellow;
     width: 20%;
     height: 50px;
@@ -136,7 +138,8 @@ footer {
     font-size: 20px; 
     width: 20%;
     height: 50px;
-    margin: 20px;
+   
+   margin-right: 0%;
 
   }
   #score{
