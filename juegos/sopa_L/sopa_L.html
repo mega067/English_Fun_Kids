@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Sopa de Letras</title>
+</head>
+<body>
+  <h1 class="heading_title">Sopa de Letras</h1>
+  <h2>Palabras a buscar:</h2>
+  <ul>
+    <li class="li">HELLO</li>
+    <li class="li" >DOG</li>
+    <li class="li" >CAT</li>
+    <li class="li" >HOUSE</li>
+    <li class="li" >COMPUTER</li>
+  </ul>
+
+  <div class="game-container">
+    <div id="wordGrid"></div>
+    <div id="wordList">
+      <h2>Palabras encontradas:</h2>
+      <ul class="li"></ul>
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+  
+  
+  
+  
+  <button class="btn_r" id="new-game" onclick="resetPage()">New Game</button>
+  <button class="btn_b" id="back-to-home">Back to Home</button>
+  <script>
+    // Obtén una referencia al botón
+    const backToHomeButton = document.getElementById('back-to-home');
+    
+    // Agrega un evento de clic al botón
+    backToHomeButton.addEventListener('click', () => {
+        // Redirige a la página de inicio
+        window.location.href = "/index.html"; // Cambia esta dirección por la de tu página de inicio real
+    });
+    </script>
+
+
+
+</body>
+<footer class="pie">
+    <div class="link-container"> <a href="https://github.com/mega067/English_Fun_Kids/tree/REPO?tab=BSD-2-Clause-1-ov-file">
+            <img class="git" src="/iconos/licence.png" alt="licence">
+            <p>Licensia BSD-2</p>
+        </a>
+        <a href="https://github.com/mega067/English_Fun_Kids">
+            <img class="git" src="/iconos/github.png" alt="git">
+            <p>github</p>
+        </a>
+        <a href="atribuciones.html"><img src="/iconos/contri.png" class="icon" alt="contri"> <p>atribuciones</p></a>
+    </div>
+    <p>© English Fun Kids.</p>
+  </footer>
+</html>

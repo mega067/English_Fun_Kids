@@ -24,11 +24,21 @@ body {
         transform: rotate(-45deg) scale(0.8);
     }
 }
+.container {
+  position: absolute; /* Posicionamiento absoluto para centrar */
+  top: 50%;
+  left: 50%;
+  font-size: 500px;
+  transform: translate(-50%, -50%); /* Centrar el contenedor */
+  display: flex; /* Permite que el texto y el corazón se acomoden en fila */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
 
 .heart {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 140px;
+    height: 140px;
     background: #ff4757;
     transform: rotate(-45deg);
     box-shadow: -10px 10px 90px #ff4757;
@@ -39,8 +49,8 @@ body {
     content:'';
     position: absolute;
     top:-50%;
-    width: 70px;
-    height:70px;
+    width: 140px;
+    height: 140px;
     background: #ff4757;
     border-radius: 50%;
     box-shadow: -10px 10px 90px #ff4757;
@@ -51,10 +61,21 @@ body {
     content: '';
     position: absolute;
     right: -50%;
-    width: 70px;
-    height: 70px;
+    width: 140px;
+    height: 140px;
     background: #ff4757;
     border-radius: 50%;
     box-shadow: -10px 10px 90px #ff4757;
 
 }
+.heart-text {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar el texto */
+    color: #fff; /* Usa texto blanco para contrastar  */
+    font-size: 50px; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+  }
+  

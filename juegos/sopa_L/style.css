@@ -1,0 +1,105 @@
+html {
+  background: rgb(240,225,114);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(245, 171, 223) 100%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heading_title {
+  text-align: center;
+  color: rgb(2, 6, 255);
+  border-radius: 30px;
+  background-color: rgb(10, 204, 230);
+  padding: 20px;
+}
+
+.git, .icon {
+  width: 60px;
+  height: auto;
+  margin: 0 10px 0 0;
+}
+
+footer {
+  text-align: center;
+}
+
+.pie {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 4px solid #f30000;
+  background: linear-gradient(0deg, rgb(239, 255, 98) 0%, rgb(129, 225, 255) 100%);
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pie p {
+  margin: 0;
+  text-align: center;
+}
+/* Tu CSS existente */
+
+.game-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#wordGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px); /* Cambia el número 10 si deseas más columnas */
+  grid-template-rows: repeat(10, 30px); /* Cambia el número 10 si deseas más filas */
+  gap: 1px;
+  background-color: #ccc;
+  border: 1px solid #999;
+}
+
+#wordGrid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.permanent-highlighted {
+  background-color: lightgreen;
+}
+
+.li{
+  font-size: 20px;
+
+
+}
+.btns{
+    
+  margin: 0%;
+  width: 100%;
+
+}
+
+.btn_r{
+
+  
+  background-color: greenyellow;
+  width: 20%;
+  height: 50px;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.btn_b{
+  background-color: #f3b200;
+  font-size: 20px; 
+  width: 20%;
+  height: 50px;
+ 
+ margin-right: 0%;
+
+}
