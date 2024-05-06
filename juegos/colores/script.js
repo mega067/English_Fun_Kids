@@ -78,7 +78,7 @@ function checkAnswer(isCorrect) {
       buttons.forEach(button => {
         button.classList.remove('button-animation', 'btn_r-animation', 'btn_b-animation');
       });
-    }, 500); // Remove animation after 0.5 seconds
+    }, 500000000); // Remove animation after 0.5 seconds
   }
 }
 
