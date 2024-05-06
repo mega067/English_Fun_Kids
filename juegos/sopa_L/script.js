@@ -3,7 +3,11 @@ const words = [
     { word: "DOG", translation: "perro" },
     { word: "CAT", translation: "gato" },
     { word: "HOUSE", translation: "casa" },
-    { word: "COMPUTER", translation: "computadora" }
+    { word: "COMPUTER", translation: "computadora" },
+    { word: "BIRD", translation: "pajaro" },
+    { word: "EAGLE", translation: "Aguila" },
+    { word: "ZOO", translation: "Zoologico" },
+    { word: "FLOWER", translation: "Flor" }
   ];
   
   const gridSize = 10; // Tamaño de la cuadrícula (opcional, puedes ajustarlo)
