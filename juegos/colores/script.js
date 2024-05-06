@@ -8,7 +8,7 @@ const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
 let currentScore = 0; // Initialize score
-const defaultFeedbackImage = "/img/memoramas_img/back.png"; // Default image
+const defaultFeedbackImage = "/img/win o failed/logo.png"; // Default image
 
 function startGame() {
   targetColor = colors[Math.floor(Math.random() * colors.length)];
@@ -37,6 +37,7 @@ function createOptions() {
       color = targetColor; // Assign the target color to the first button
     } else {
       color = colors[Math.floor(Math.random() * colors.length)]; // Randomly choose other colors
+      
     }
     button.style.backgroundColor = color;
     button.addEventListener('click', () => checkAnswer(color === targetColor));
@@ -55,13 +56,13 @@ function createOptions() {
 function checkAnswer(isCorrect) {
   if (isCorrect) {
     currentScore++; 
-    feedbackImage.src = "/img/memoramas_img/rana.jpg";
+    feedbackImage.src = "/img/win o failed/win.png";
     resultDisplay.textContent = "¡Correcto!";
     updateScoreDisplay();
     setTimeout(startGame, 1000); // Automatic restart after 1 second
   } else {
     currentScore = 0;
-    feedbackImage.src = "/img/memoramas_img/limon.jpg";
+    feedbackImage.src = "/img/win o failed/failed.png";
     resultDisplay.textContent = "intentalo otra ves!";
     updateScoreDisplay();
     

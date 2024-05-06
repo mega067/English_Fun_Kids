@@ -117,7 +117,7 @@ footer {
     }
   }
   .btns{
-    
+    display: flex;
     margin: 0%;
     width: 100%;
 
@@ -130,7 +130,8 @@ footer {
     width: 20%;
     height: 50px;
     font-size: 20px;
-    margin: 20px;
+    margin: 20px auto;
+
   }
   
   .btn_b{
@@ -139,7 +140,7 @@ footer {
     width: 20%;
     height: 50px;
    
-   margin-right: 0%;
+  
 
   }
   #score{
@@ -151,6 +152,32 @@ footer {
 
   }
   #options{
+    margin: 12px auto;
     border-color: #f30000;
-    border-radius: 10px;
+    border-radius: 30%;
   }
+#back-to-home{
+  background-color: #f3b200;
+  font-size: 20px; 
+  width: 20%;
+  height: 50px;
+ 
+}
+ .flex{
+  display: flex;
+  margin-top: 0%;
+  background-color: #30003f;
+ }
+
+.img_feed{
+  margin-left: 20%;
+  margin: 30px;
+  border-color: #f30000;
+  border-radius: 30px;  
+
+}
+
+  h1{   
+    font-size: 500px;
+
+}
