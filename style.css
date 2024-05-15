@@ -13,10 +13,12 @@ body{
     height: 90px;
     width: 90px;
     transition: border-color 0.3s ease; /* Agregado efecto de transición */
+    transition: transform 0.3s ease; 
 }
 
 .logo:hover {
-    border-color: red; /* Cambiado el color del borde al pasar el ratón por encima */
+    transform: scale(1.2);
+    
 }
 
 .container_1 {
