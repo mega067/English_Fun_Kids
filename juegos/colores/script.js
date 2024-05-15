@@ -8,7 +8,7 @@ const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
 let currentScore = 0; // Initialize score
-const defaultFeedbackImage = "/img/win o failed/logo.png"; // Default image
+const defaultFeedbackImage = "/img/win o failed/pensando.png"; // Default image
 
 function startGame() {
   targetColor = colors[Math.floor(Math.random() * colors.length)];
