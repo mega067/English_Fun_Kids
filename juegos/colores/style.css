@@ -5,13 +5,30 @@ html {
     
     
 }
+.titu_name{
+  margin-left: 25%;
+  font-size: 60px;
+
+}
+
 .heading_title {
-    text-align: center;
-    color: rgb(2, 6, 255);
-    border-radius: 30px;
-    
-    background-color: rgb(10, 204, 230);
-    padding: 20px;
+  align-items: center;
+  max-height: 100px;
+  display: flex;
+  text-align: center;
+  color: rgb(2, 6, 255);
+  border-radius: 30px;
+  
+  background-color: rgb(10, 204, 230);
+  padding: 5px;
+}
+.logo{
+  margin-right: 30px;
+  border: 10px red;
+  border-radius: 100%;
+  height: 90px;
+  width: 90px;
+
 }
 .git {
     align-items: center;
@@ -75,8 +92,8 @@ footer {
     margin-top: 20px;
   }
   .img_feed{
-    max-width: 20%;
-    max-height: auto;
+ height: 300px;
+ width: auto;
   }
 
 
@@ -152,6 +169,7 @@ footer {
 
   }
   #options{
+    align-items: center;
     margin: 12px auto;
     border-color: #f30000;
     border-radius: 30%;
@@ -166,7 +184,7 @@ footer {
  .flex{
   display: flex;
   margin-top: 0%;
-  background-color: #30003f;
+  background-color: #9f50b7;
  }
 
 .img_feed{
