@@ -6,11 +6,14 @@ html {
     
 }
 .titu_name{
-  margin-left: 25%;
-  font-size: 60px;
+  
+  font-size: 45px;
 
 }
-
+.Display{
+  margin-left: 30%;
+  align-items: center;
+}
 .heading_title {
   align-items: center;
   max-height: 100px;

@@ -63,7 +63,7 @@ function randomValue() {
 
 function displayCompletedMessage() {
   const statsElement = document.querySelector('#stats');
-  statsElement.innerHTML = '¡Completado!';
+  statsElement.innerHTML = '¡Congratulations!';
 
   setTimeout(() => {
     window.location.href = 'memorama.html'; // Redirect after 10 seconds

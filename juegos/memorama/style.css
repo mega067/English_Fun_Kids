@@ -23,14 +23,18 @@ html {
     transition: border-color 0.3s ease; /* Agregado efecto de transición */
     transition: transform 0.3s ease; 
 }
+.Display{
+    margin-left: 24%;
+    align-items: center;
+}
 
 .logo:hover {
     transform: scale(1.2);
     
 }
 .titu_name{
-    margin-left: 25%;
-    font-size: 60px;
+    
+    font-size: 100px;
 
 }
 
