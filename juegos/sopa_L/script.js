@@ -9,6 +9,7 @@ const words = [
     { word: "ZOO", translation: "Zoologico" },
     { word: "FLOWER", translation: "Flor" }
   ];
+  var i =1;
   
   const gridSize = 10; // Tamaño de la cuadrícula (opcional, puedes ajustarlo)
   let grid = [];
@@ -114,9 +115,11 @@ const words = [
   
   // Lógica para actualizar la lista de palabras encontradas
   function markWordAsFound(word) {
+
     const wordItem = document.createElement('li');
-    wordItem.textContent = word + ' - ' + words.find(w => w.word === word).translation;
+    wordItem.textContent = i + word + ' - ' + words.find(w => w.word === word).translation;
     wordList.appendChild(wordItem);
+    
   }
   function resetPage() {
     location.reload(); // Esta línea actualiza la página
