@@ -3,7 +3,7 @@ const availableCardNames = ['ballena', 'cangrejo', 'cereza', 'foca',
   'limon', 'manzana', 'medusa', 'naranja', 
   'pera', 'pez', 'platano', 'pulpo',
   'rana', 'sandia', 'tortuga', 'uvas'];
-const imgPath = 'img/memoramas_img/';
+const imgPath = 'English_Fun_Kids/img/memoramas_img/';
 
 let cards = []; 
 let selectedCards = [];
