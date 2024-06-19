@@ -8,7 +8,7 @@ const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
 let currentScore = 0; // Initialize score
-const defaultFeedbackImage = "/img/win o failed/pensando.png"; // Default image
+const defaultFeedbackImage = "/English_Fun_Kids/img/win o failed/pensando.png"; // Default image
 
 function startGame() {
   targetColor = colors[Math.floor(Math.random() * colors.length)];
@@ -56,13 +56,13 @@ function createOptions() {
 function checkAnswer(isCorrect) {
   if (isCorrect) {
     currentScore++; 
-    feedbackImage.src = "/img/win o failed/win.png";
+    feedbackImage.src = "/English_Fun_Kids/img/win o failed/win.png";
     resultDisplay.textContent = "¡Correcto!";
     updateScoreDisplay();
     setTimeout(startGame, 1000); // Automatic restart after 1 second
   } else {
     currentScore = 0;
-    feedbackImage.src = "/img/win o failed/failed.png";
+    feedbackImage.src = "/English_Fun_Kids/img/win o failed/failed.png";
     resultDisplay.textContent = "intentalo otra ves!";
     updateScoreDisplay();
     
@@ -90,7 +90,7 @@ function updateScoreDisplay() {
 
 
   backToHomeButton.addEventListener('click', () => {
-    window.location.href = "/index.html"; // Change to your actual home page link
+    window.location.href = "/English_Fun_Kids/index.html"; // Change to your actual home page link
   });
   
   newGameButton.addEventListener('click', startGame);
