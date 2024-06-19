@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const links = document.querySelectorAll('a');
-    const clickSound = new Audio('sound/click.mp3'); // Ruta a tu archivo de sonido
+    const clickSound = new Audio('/English_Fun_Kids/sound/click.mp3'); // Ruta a tu archivo de sonido
 
     links.forEach(link => {
         link.addEventListener('click', (e) => {
