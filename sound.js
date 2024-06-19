@@ -6,11 +6,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         link.addEventListener('click', (e) => {
             e.preventDefault(); // Previene la redirección inmediata
             const url = link.href; // Guarda la URL del enlace
-            clickSound.play();
-
-            // Espera a que el sonido termine de reproducirse antes de redirigir
-            clickSound.addEventListener('ended', () => {
-                window.location.href = url;
+            clickSound.play().then(() => {
+                // Espera a que el sonido termine de reproducirse antes de redirigir
+                clickSound.addEventListener('ended', () => {
+                    window.location.href = url;
+                });
+            }).catch(error => {
+                console.error('Error al reproducir el sonido:', error);
+                window.location.href = url; // Redirigir si hay un error
             });
         });
     });
