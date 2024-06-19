@@ -62,6 +62,8 @@ function checkAnswer(isCorrect) {
     setTimeout(startGame, 1000); // Automatic restart after 1 second
   } else {
     currentScore = 0;
+
+    
     feedbackImage.src = "/English_Fun_Kids/img/win o failed/failed.png";
     resultDisplay.textContent = "intentalo otra ves!";
     updateScoreDisplay();
