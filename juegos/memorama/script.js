@@ -28,7 +28,7 @@ function activate(e) {
           currentMove = 0;
 
           if (document.querySelectorAll('.card.active').length === totalCards) { 
-            displayCompletedMessage();
+            win();
           }
         } else {
           setTimeout(() => {
@@ -60,7 +60,7 @@ function randomValue() {
     randomValue();
   }
 }
-function displayCompletedMessage() {
+function win() {
   const statsElement = document.querySelector('#stats');
   statsElement.innerHTML = '¡Congratulations!';
 
@@ -75,6 +75,7 @@ function displayCompletedMessage() {
   }, 3000);
   
 }
+
 
 
 
