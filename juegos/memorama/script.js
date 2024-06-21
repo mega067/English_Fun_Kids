@@ -3,7 +3,7 @@ const availableCardNames = ['ballena', 'cangrejo', 'cereza', 'foca',
   'limon', 'manzana', 'medusa', 'naranja', 
   'pera', 'pez', 'platano', 'pulpo',
   'rana', 'sandia', 'tortuga', 'uvas'];
-const imgPath = '/English_Fun_Kids/img/memoramas_img/';
+const imgPath = '/img/memoramas_img/';
 
 let cards = []; 
 let selectedCards = [];
@@ -28,7 +28,7 @@ function activate(e) {
           currentMove = 0;
 
           if (document.querySelectorAll('.card.active').length === totalCards) { 
-            displayCompletedMessage();
+            win();
           }
         } else {
           setTimeout(() => {
@@ -60,15 +60,24 @@ function randomValue() {
     randomValue();
   }
 }
-
-function displayCompletedMessage() {
+function win() {
   const statsElement = document.querySelector('#stats');
   statsElement.innerHTML = '¡Congratulations!';
 
+  const victoryImage = document.getElementById('victoryImage');
+  victoryImage.style.display = 'block'; // Mostrar la imagen de victoria
+
+  const victorySound = document.getElementById('victorySound');
+  victorySound.play();
+
   setTimeout(() => {
-    window.location.href = 'memorama.html'; // Redirect after 10 seconds
-  }, 3000); // 10000 milliseconds = 10 seconds
+    window.location.href = '/index.html'; // Redirigir después de 3 segundos
+  }, 3000);
+  
 }
+
+
+
 
 
 for (let i=0; i < totalCards; i++) {

@@ -113,17 +113,36 @@ function selectCell(event) {
   }
 }
 
+
 // Lógica para actualizar la lista de palabras encontradas
 function markWordAsFound(word) {
   const wordItem = document.createElement('li');
   wordItem.textContent = `${i}.- ${word} - ${words.find(w => w.word === word).translation}`;
   wordList.appendChild(wordItem);
   i++; // Incrementar el contador
+
+  if (i >= 10) {
+    win(); // Call the win function when i reaches or surpasses 9
+  }
 }
 
-function resetPage() {
-  location.reload(); // Esta línea actualiza la página
-}
+
+
+  function win() {
+    
+    const victoryImage = document.getElementById('victoryImage');
+    victoryImage.style.display = 'block'; // Mostrar la imagen de victoria
+  
+    const victorySound = document.getElementById('victorySound');
+    victorySound.play();
+  
+    setTimeout(() => {
+      window.location.href = '/index.html'; // Redirigir después de 3 segundos
+    }, 3000);
+    
+  }
+
+
 
 createGrid(); // Crea la cuadrícula
 placeWords(); // Coloca las palabras aleatoriamente

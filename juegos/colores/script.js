@@ -8,7 +8,7 @@ const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
 let currentScore = 0; // Initialize score
-const defaultFeedbackImage = "/English_Fun_Kids/img/win o failed/pensando.png"; // Default image
+const defaultFeedbackImage = "/img/win o failed/pensando.png"; // Default image
 
 function startGame() {
   targetColor = colors[Math.floor(Math.random() * colors.length)];
@@ -52,38 +52,39 @@ function createOptions() {
 }
 
 
-
 function checkAnswer(isCorrect) {
   if (isCorrect) {
-    currentScore++; 
-    feedbackImage.src = "/English_Fun_Kids/img/win o failed/win.png";
+    // Handle correct answer
+    currentScore++;
+    feedbackImage.src = "/img/win o failed/win.png";
     resultDisplay.textContent = "¡Correcto!";
     updateScoreDisplay();
     setTimeout(startGame, 1000); // Automatic restart after 1 second
   } else {
+    // Handle incorrect answer
     currentScore = 0;
-
-    
-    feedbackImage.src = "/English_Fun_Kids/img/win o failed/failed.png";
-    resultDisplay.textContent = "intentalo otra ves!";
+    feedbackImage.src = "/img/win o failed/failed.png";
+    resultDisplay.textContent = "Inténtalo otra vez!";
     updateScoreDisplay();
-    
-    // Add animation to buttons
+
+    failed();
+
+    // Add animation to buttons with improved performance
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
-      if (button.classList.contains('btn_r') || button.classList.contains('btn_b')) {
-        button.classList.add('button-animation', button.classList.contains('btn_r') ? 'btn_r-animation' : 'btn_b-animation');
-      } else {
-        button.classList.add('button-animation');
-      }
+      const animationClass = button.classList.contains('btn_r') ? 'btn_r-animation' : 'btn_b-animation';
+      button.classList.add('button-animation', animationClass);
     });
+
+    // Remove animation after a reasonable delay (0.5 seconds)
     setTimeout(() => {
       buttons.forEach(button => {
         button.classList.remove('button-animation', 'btn_r-animation', 'btn_b-animation');
       });
-    }, 500000000); // Remove animation after 0.5 seconds
+    }, 5000000); // Adjust delay as needed
   }
 }
+
 
 
 function updateScoreDisplay() {
@@ -92,8 +93,22 @@ function updateScoreDisplay() {
 
 
   backToHomeButton.addEventListener('click', () => {
-    window.location.href = "/English_Fun_Kids/index.html"; // Change to your actual home page link
+    window.location.href = "/index.html"; // Change to your actual home page link
   });
   
   newGameButton.addEventListener('click', startGame);
   startGame();
+
+  function failed() {
+    
+    const victoryImage = document.getElementById('victoryImage');
+    victoryImage.style.display = 'block'; // Mostrar la imagen de victoria
+  
+    const victorySound = document.getElementById('victorySound');
+    victorySound.play();
+  
+    setTimeout(() => {
+      window.location.href = '/index.html'; // Redirigir después de 3 segundos
+    }, 3000);
+    
+  }

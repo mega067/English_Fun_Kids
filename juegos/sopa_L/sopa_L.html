@@ -5,10 +5,20 @@
   <title>Sopa de Letras</title>
 </head>
 <body>
+
+<!-- Imagen de victoria, inicialmente oculta -->
+<div id="victoryImage" style="display: none;">
+  <img class="img_win" src="/img/win o failed/win.png" alt="Victory">
+</div>
+<audio id="victorySound" src="/sound/click.mp3"></audio>
+
+
+
+
   <div class="heading_title" >
       
-    <a href="/English_Fun_Kids/index.html">
-      <img src="/English_Fun_Kids/img/win o failed/logo.png"class="logo" title="logo">
+    <a href="/index.html">
+      <img src="/img/win o failed/logo.png"class="logo" title="logo">
   </a>
   <h1 class="titu_name" color="black">WORD SEARCH</h1>
 </div>
@@ -17,12 +27,12 @@
     <li class="li">1.-HELLO</li>
     <li class="li" >2.-DOG</li>
     <li class="li" >3.-CAT</li>
-    <li class="li" >3.-HOUSE</li>
-    <li class="li" >4.-COMPUTER</li>
-    <li class="li" >5.-BIRD</li>
-    <li class="li" >6.-ZOO</li>
-    <li class="li" >7.-EAGLE</li>
-    <li class="li" >8.-FLOWER</li>
+    <li class="li" >4.-HOUSE</li>
+    <li class="li" >5.-COMPUTER</li>
+    <li class="li" >6.-BIRD</li>
+    <li class="li" >7.-ZOO</li>
+    <li class="li" >8.-EAGLE</li>
+    <li class="li" >9.-FLOWER</li>
   </ul>
 
   <div class="game-container">
@@ -35,7 +45,7 @@
   </div>
 
   <script src="script.js"></script>
-  <script src="/English_Fun_Kids/sound.js"></script>
+  <script src="/sound.js"></script>
   
   
   
@@ -48,7 +58,7 @@
     // Agrega un evento de clic al botón
     backToHomeButton.addEventListener('click', () => {
         // Redirige a la página de inicio
-        window.location.href = "/English_Fun_Kids/index.html"; // Cambia esta dirección por la de tu página de inicio real
+        window.location.href = "/index.html"; // Cambia esta dirección por la de tu página de inicio real
     });
     </script>
 
@@ -57,14 +67,14 @@
 </body>
 <footer class="pie">
     <div class="link-container"> <a href="https://github.com/mega067/English_Fun_Kids/tree/REPO?tab=BSD-2-Clause-1-ov-file">
-            <img class="git" src="/English_Fun_Kids/iconos/licence.png" alt="licence">
+            <img class="git" src="/iconos/licence.png" alt="licence">
             <p>Licensia BSD-2</p>
         </a>
         <a href="https://github.com/mega067/English_Fun_Kids">
-            <img class="git" src="/English_Fun_Kids/iconos/github.png" alt="git">
+            <img class="git" src="/iconos/github.png" alt="git">
             <p>github</p>
         </a>
-        <a href="atribuciones.html"><img src="/English_Fun_Kids/iconos/contri.png" class="icon" alt="contri"> <p>atribuciones</p></a>
+        <a href="atribuciones.html"><img src="/iconos/contri.png" class="icon" alt="contri"> <p>atribuciones</p></a>
     </div>
     <p>© English Fun Kids.</p>
   </footer>
