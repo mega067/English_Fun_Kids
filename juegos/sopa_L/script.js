@@ -120,12 +120,13 @@ function markWordAsFound(word) {
   wordItem.textContent = `${i}.- ${word} - ${words.find(w => w.word === word).translation}`;
   wordList.appendChild(wordItem);
   i++; // Incrementar el contador
-}
-function checkWin() {
-    if (foundWords.length === words.length) {
-      win();
-    }
+
+  if (i >= 10) {
+    win(); // Call the win function when i reaches or surpasses 9
   }
+}
+
+
 
   function win() {
     
