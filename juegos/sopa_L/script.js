@@ -137,7 +137,7 @@ function markWordAsFound(word) {
     victorySound.play();
   
     setTimeout(() => {
-      window.location.href = '/index.html'; // Redirigir después de 3 segundos
+      window.location.href = '/English_Fun_Kids/index.html'; // Redirigir después de 3 segundos
     }, 3000);
     
   }
