@@ -46,17 +46,22 @@ html {
     margin: 0 10px 0 0; /* Adjusted margins */
 }
 
-footer {
-    text-align: center;
+footer { 
+  width: 100%;
+  text-align: center;
+  position: relative; /* Cambia de fixed a relative */
+  bottom: 0;
+  z-index: 10; /* Asegura que el footer esté sobre otros elementos */
 }
 
 .pie {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; /* Añadir dirección de columna para apilar verticalmente */
-    border: 4px solid #f30000;
-    background: linear-gradient(0deg, rgb(239, 255, 98) 0%, rgb(129, 225, 255) 100%);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 4px solid #f30000;
+  background: linear-gradient(0deg, rgb(239, 255, 98) 0%, rgb(129, 225, 255) 100%);
+  padding: 10px 0; /* Agrega un poco de padding para que el contenido no se vea muy ajustado */
 }
 
 .link-container {

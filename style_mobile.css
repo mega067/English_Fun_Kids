@@ -23,9 +23,10 @@ body{
 
 .container_1 {
     margin-bottom: 20px;
-    max-width: 300px; /* Aumentado el ancho máximo del contenedor */
+    max-width: 400px; /* Aumentado el ancho máximo del contenedor */
+    min-height: 400px;
     margin: 15px auto; /* Ajuste menor de la propiedad "margin" */
-    padding: 20px;
+    padding: 10px;
     flex-grow: 1;
     
     transition: transform 0.3s ease; /* Agregada animación de transición */
@@ -38,7 +39,7 @@ body{
 
 .padre{
     align-items: center;
-    display: flex;
+
     flex-wrap: wrap;
 }
 .container_2 {
@@ -55,12 +56,13 @@ text-align: center;
     padding: 20px;
 }
 .titu_name{
-    margin-left: 28%;
+    
+
     font-size: 60px;
 
 }
 .titu_name_atri{
-    margin-left: 35%;
+
     font-size: 60px;
   
   }
