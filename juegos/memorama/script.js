@@ -3,7 +3,7 @@ const availableCardNames = ['ballena', 'cangrejo', 'cereza', 'foca',
   'limon', 'manzana', 'medusa', 'naranja', 
   'pera', 'pez', 'platano', 'pulpo',
   'rana', 'sandia', 'tortuga', 'uvas'];
-const imgPath = '/img/memoramas_img/';
+const imgPath = '/English_Fun_Kids/img/memoramas_img/';
 
 let cards = []; 
 let selectedCards = [];
@@ -71,7 +71,7 @@ function win() {
   victorySound.play();
 
   setTimeout(() => {
-    window.location.href = '/index.html'; // Redirigir después de 3 segundos
+    window.location.href = '/English_Fun_Kids/index.html'; // Redirigir después de 3 segundos
   }, 3000);
   
 }

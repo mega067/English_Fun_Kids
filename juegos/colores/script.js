@@ -8,7 +8,7 @@ const backToHomeButton = document.getElementById("back-to-home");
 
 let targetColor;
 let currentScore = 0; // Initialize score
-const defaultFeedbackImage = "/img/win o failed/pensando.png"; // Default image
+const defaultFeedbackImage = "/English_Fun_Kids/img/win o failed/pensando.png"; // Default image
 
 function startGame() {
   targetColor = colors[Math.floor(Math.random() * colors.length)];
@@ -54,8 +54,7 @@ function createOptions() {
 
 function checkAnswer(isCorrect) {
   if (isCorrect) {
-    // Handle correct answer
-    currentScore++;
+    currentScore++; 
     feedbackImage.src = "/img/win o failed/win.png";
     resultDisplay.textContent = "¡Correcto!";
     updateScoreDisplay();
@@ -64,7 +63,7 @@ function checkAnswer(isCorrect) {
     // Handle incorrect answer
     currentScore = 0;
     feedbackImage.src = "/img/win o failed/failed.png";
-    resultDisplay.textContent = "Inténtalo otra vez!";
+    resultDisplay.textContent = "intentalo otra ves!";
     updateScoreDisplay();
 
     failed();
@@ -93,22 +92,8 @@ function updateScoreDisplay() {
 
 
   backToHomeButton.addEventListener('click', () => {
-    window.location.href = "/index.html"; // Change to your actual home page link
+    window.location.href = "/English_Fun_Kids/index.html"; // Change to your actual home page link
   });
   
   newGameButton.addEventListener('click', startGame);
   startGame();
-
-  function failed() {
-    
-    const victoryImage = document.getElementById('victoryImage');
-    victoryImage.style.display = 'block'; // Mostrar la imagen de victoria
-  
-    const victorySound = document.getElementById('victorySound');
-    victorySound.play();
-  
-    setTimeout(() => {
-      window.location.href = '/index.html'; // Redirigir después de 3 segundos
-    }, 3000);
-    
-  }
